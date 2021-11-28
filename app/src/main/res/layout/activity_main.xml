@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    android:id="@+id/mainLayout"
+    tools:context=".MainActivity">
+    <!-- Linear Layout que contindra el text que podrem configurar mitjançant RadioButtons -->
+    <LinearLayout
+        android:id="@+id/Linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/titol_configuram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONFIGURA'M"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <!-- RadioGroup en el que el usuari podra decidir si vol editar el text (radioButton_Layout_Lletras) o si vol editar el color (radioButton2_Layout_Colors)-->
+    <RadioGroup
+        android:id="@+id/radioGroup_Layouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Linear1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton_Layout_Lletres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:text="Opcions de lletra" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Layout_Colors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Opcions de color" />
+
+    </RadioGroup>
+
+    <!-- PART DE LA EDICIO DE LA LLETRA DEL LINEARLAYOUT -->
+    <TextView
+        android:id="@+id/tv_lletra1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup_lletra1"
+        android:layout_marginTop="-22dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Tamany de la lletra:"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_lletra1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_below="@+id/radioGroup_Layouts"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp">
+
+        <RadioButton
+            android:id="@+id/RadioButton_Lletra1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Molt petita"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_Lletra2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Petita"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_Lletra3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mijana"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_Lletra4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gran"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_Lletra5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Molt gran"/>
+
+
+
+
+    </RadioGroup>
+
+    <!-- PART DE LA EDICIO DEL COLOR DEL LINEARLAYOUT-->
+
+
+    <!-- Color de la lletra -->
+    <TextView
+        android:id="@+id/tv_colorlletra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup_colorLletra"
+        android:layout_marginTop="-22dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Color de la lletra:"
+        android:visibility="invisible"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_colorLletra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/radioGroup_Layouts"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp">
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorLletra1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Vermell"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorLletra2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blau"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorLletra3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blanc"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorLletra4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Negre" />
+
+    </RadioGroup>
+
+    <!-- Color del fons de la lletra-->
+
+    <TextView
+        android:id="@+id/tv_colorFonslletra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup_colorFonslletra"
+        android:layout_marginTop="-22dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Color del fons de la lletra:"
+        android:layout_marginLeft="220dp"
+        android:visibility="invisible"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_colorFonslletra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/radioGroup_Layouts"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="220dp">
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFonslletra1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vermell"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFonslletra2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blau"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFonslletra3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blanc"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFonslletra4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Negre"/>
+
+    </RadioGroup>
+
+    <!--Color del fons -->
+
+    <TextView
+        android:id="@+id/tv_colorFons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup_colorFonslletra"
+        android:layout_marginTop="-22dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Color del fons:"
+        android:paddingTop="250dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_colorFons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/radioGroup_Layouts"
+        android:paddingTop="320dp"
+        android:layout_marginLeft="20dp">
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFons1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vermell"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFons2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verd"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFons3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blau"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFons4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blanc"/>
+
+        <RadioButton
+            android:id="@+id/RadioButton_colorFons5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Negre"/>
+
+    </RadioGroup>
+
+    <!--Butto per fer un submit dels canvis que desitja fer el usuari -->
+    <Button
+        android:id="@+id/Aplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="85dp"
+        android:text="APLICAR"/>
+
+
+</RelativeLayout>
